@@ -47,7 +47,7 @@ db.once('open', function () {
     console.log('DataBase Connected');
 });
 
-const secret = 'process.env.SECRET' || 'Thisismyyelpcampsecret'
+const secret = `${process.env.SECRET}` || 'Thisismyyelpcampsecret'
 
 const store = new MongoStore({
     mongoUrl: dbUrl,
